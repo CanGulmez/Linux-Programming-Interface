@@ -34,7 +34,7 @@ void main(int argc, char *argv[])
 
    /* Create shared memory object and set its size */
 
-   fd = open(argv[optind], flags, perms);
+   fd = shm_open(argv[optind], flags, perms);
    if (fd == -1)
       syscall_error();
 
